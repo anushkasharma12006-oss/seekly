@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Light Theme Palette Tokens */
+    --bg-main: #FFF9F3;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #FFFDFC;
+    --bg-muted: #F8EFE6;
+    
+    --color-peach: #FFE8D6;
+    --color-blush: #FFD6E7;
+    --color-lilac: #E6D8FF;
+    --color-sky: #D8ECFF;
+    
+    --text-primary: #17172B;
+    --text-secondary: #5D5B70;
+    --text-muted: #87859B;
+    
+    --border-subtle: #EADFD5;
+    --border-strong: #D5C7B8;
+    
+    --accent-primary: #7048E8;
+    --accent-primary-hover: #5F3DC4;
+    --accent-light: #F2ECFE;
+    --accent-highlight: #FF9EC6;
+    
+    --shadow-soft: 0 4px 20px -2px rgba(23, 23, 43, 0.05), 0 2px 6px -1px rgba(23, 23, 43, 0.03);
+    --shadow-elevated: 0 12px 36px -4px rgba(23, 23, 43, 0.08), 0 4px 12px -2px rgba(23, 23, 43, 0.04);
+    --shadow-glass: 0 8px 32px 0 rgba(112, 72, 232, 0.06);
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-pill: 9999px;
+
+    --font-serif: 'Newsreader', Garamond, Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  /* Dark Theme Palette Tokens */
+  .dark {
+    --bg-main: #10111F;
+    --bg-surface: #191B2D;
+    --bg-surface-elevated: #21243B;
+    --bg-muted: #161729;
+
+    --color-peach: #3D2D24;
+    --color-blush: #3D2232;
+    --color-lilac: #2B2344;
+    --color-sky: #1F2E40;
+
+    --text-primary: #F7F5FA;
+    --text-secondary: #9E9CB5;
+    --text-muted: #6B6984;
+
+    --border-subtle: #272A42;
+    --border-strong: #383C5E;
+
+    --accent-primary: #9D85FF;
+    --accent-primary-hover: #B5A2FF;
+    --accent-light: #252243;
+    --accent-highlight: #FDBA74;
+
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-elevated: 0 14px 40px -4px rgba(0, 0, 0, 0.6), 0 4px 14px -2px rgba(0, 0, 0, 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  /* Accent Color Variants */
+  [data-accent="rose"] {
+    --accent-primary: #E11D48;
+    --accent-primary-hover: #BE123C;
+    --accent-light: #FFE4E6;
+    --accent-highlight: #FDA4AF;
+  }
+  .dark[data-accent="rose"] {
+    --accent-primary: #FB7185;
+    --accent-primary-hover: #FDA4AF;
+    --accent-light: #4C1D27;
+  }
+
+  [data-accent="peach"] {
+    --accent-primary: #EA580C;
+    --accent-primary-hover: #C2410C;
+    --accent-light: #FFEDD5;
+    --accent-highlight: #FDBA74;
+  }
+  .dark[data-accent="peach"] {
+    --accent-primary: #FB923C;
+    --accent-primary-hover: #FDBA74;
+    --accent-light: #4A2312;
+  }
+
+  [data-accent="sky"] {
+    --accent-primary: #0284C7;
+    --accent-primary-hover: #0369A1;
+    --accent-light: #E0F2FE;
+    --accent-highlight: #7DD3FC;
+  }
+  .dark[data-accent="sky"] {
+    --accent-primary: #38BDF8;
+    --accent-primary-hover: #7DD3FC;
+    --accent-light: #0C3652;
+  }
+
+  [data-accent="mint"] {
+    --accent-primary: #059669;
+    --accent-primary-hover: #047857;
+    --accent-light: #D1FAE5;
+    --accent-highlight: #6EE7B7;
+  }
+  .dark[data-accent="mint"] {
+    --accent-primary: #34D399;
+    --accent-primary-hover: #6EE7B7;
+    --accent-light: #064E3B;
+  }
+
+  /* Motion scales */
+  [data-motion="reduced"] *,
+  [data-motion="minimal"] * {
+    transition-duration: 0.05s !important;
+    animation-duration: 0.05s !important;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* Editorial Serif & Sans Classes */
+.font-serif-headline {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Subtle magnetic button and interactive utilities */
+.seekly-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seekly-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-elevated);
+}
+
+.seekly-input-container {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seekly-input-container:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-light), var(--shadow-elevated);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

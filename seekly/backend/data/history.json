@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cc22437b",
+    "query": "weather",
+    "answer_snippet": "Based on live search results for **weather**, recent information highlights significant developments across recognized sources [1]. Check current conditions in ...",
+    "sources_count": 6,
+    "created_at": "2026-10-15T16:58:25.614164+00:00",
+    "tags": []
+  },
+  {
+    "id": "93e160bc",
+    "query": "Tokamak magnetic confinement fusion net energy gains",
+    "answer_snippet": "Based on live search results for **Tokamak magnetic confinement fusion net energy gains**, recent information highlights significant developments across recogni...",
+    "sources_count": 6,
+    "created_at": "2026-10-15T16:56:34.757568+00:00",
+    "tags": []
+  },
+  {
+    "id": "5243b3f2",
+    "query": "James Webb telescope discoveries",
+    "answer_snippet": "Based on live search results for **James Webb telescope discoveries**, recent information highlights significant developments across recognized sources [1]. Vie...",
+    "sources_count": 4,
+    "created_at": "2026-10-15T16:11:46.072871+00:00",
+    "tags": []
+  }
+]

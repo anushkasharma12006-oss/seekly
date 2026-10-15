@@ -1,0 +1,10 @@
+{
+  "theme": "light",
+  "accent": "lilac",
+  "motion": "minimal",
+  "search_engine": "duckduckgo",
+  "ai_engine": "auto",
+  "safe_search": "moderate",
+  "max_sources": 6,
+  "save_history": true
+}
